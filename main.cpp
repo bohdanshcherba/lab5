@@ -2,9 +2,6 @@
 using namespace std;
 const int N = 4;
 
-
-
-
 int main(){
     system("cls");
 
@@ -17,7 +14,7 @@ int main(){
     ukraine.addCity(kyiv);
     ukraine.addCity(odessa);
 
-      Area suhiv("Suhiv");
+    Area suhiv("Suhiv");
     Area zaliznuchnuyu("Zaliznuchnuyu");
     Area shevchankivskiy("Shevchankivskiy");
     Area kyivskiy("Kyivskiy");
@@ -28,7 +25,6 @@ int main(){
     kyiv.addArea(shevchankivskiy);
     odessa.addArea(kyivskiy); 
 
- 
     suhiv.addCinema(Cinema("MultiPlex",230));
     kyivskiy.addCinema(Cinema("MultiPlex",230));
 
@@ -37,20 +33,12 @@ int main(){
 
     Cinema multiplex("MultiPlex",230);
     Cinema planetcinema("PlanetCinema",300);
-
-   
+  
     multiplex.addNewMovieToCinema(Movie(121, 6.7, "\"Shaft\"", 14, 6, 2019, 01, 13.69, "Middle generation Shaft looks good roaring around in his souped-up Monte Carlo SS.s It's too bad the characters as a whole didn't have a better vehicle.", ACTION));
     multiplex.addNewMovieToCinema(Movie(122, 5.2, "\"Hubie Halloween\"", 7, 9, 2020, 02, 11.29, "After swapping bodies with a deranged serial killer, a young girl in high school discovers she has less than 24 hours before the change becomes permanent.", COMEDY));
 
     planetcinema.addNewMovieToCinema(Movie(123, 6.2, "\"Chemical Hearts\"", 21, 8, 2020, 03, 13.50, "Diagnosed with a mental illness halfway through his senior year of high school, a witty, introspective teen struggles to keep it a secret while falling in love with a brilliant classmate who inspires him to not be defined by his condition.",DRAMA));
     planetcinema.addNewMovieToCinema(Movie(124, 5.6, "\"Dolittle\"", 9, 1, 2020, 4, 14.20, "After his wife's death, Dr. John Dolittle (Robert Downey, Jr.) decided to hide from the world with his beloved animals. But he has to take a journey to a mysterious island to find a healing tree, which is the only medicine that can help the dying Queen Victoria (Jessie Buckley) in Buckingham Palace.",FANTASY));
-
-
-   
-       
-    /* lviv.printAllArea();
-    kyiv.printAllArea();
-    odessa.printAllArea();  */
 
     int check;
     bool exit = false;
@@ -106,12 +94,9 @@ int main(){
                 multiplex.printAllMovies();
             } 
     }
-    
-    
         }
         break;
-    case SORTALLMOVIE:{
-           
+    case SORTALLMOVIE:{          
        Entry* array = new Entry[N];
                 array[0]=Entry("\"Shaft\"          ",MakeDate(14,6,2019));
                 array[1]=Entry("\"Hubie Halloween\"",MakeDate(7,9,2020));
@@ -123,10 +108,7 @@ int main(){
 
                 delete [] array;
                
-                }
-            
-       
-    
+                }   
     break;
     case SORTGENRE: {
         cout << "enter genre" << endl << "1.Action | 2.Comedy | 3.Drama | 4.Fantasy "<<endl;
@@ -134,9 +116,6 @@ int main(){
         cin>> err;
         cout << endl;
 
-     /*    multiplex.filterMovieByGenre(ACTION);
-        planetcinema.filterMovieByGenre(DRAMA);
- */
         if(err == 1){
         multiplex.filterMovieByGenre(ACTION);
         planetcinema.filterMovieByGenre(ACTION);
@@ -160,7 +139,5 @@ int main(){
     cout << "Again 0 ; Exit 1" << endl;
          cin >> exit;
     }
-    
-    
     return 0;
 }
