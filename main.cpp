@@ -1,6 +1,6 @@
 #include "City.h"
 using namespace std;
-const int N = 4;
+const int N = 4; // use in array for sorting , changing if changed number of films.
 
 int main(){
     system("cls");
